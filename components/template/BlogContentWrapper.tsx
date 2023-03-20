@@ -234,7 +234,6 @@ function debounce(func, wait, options) {
         isInvoking = shouldInvoke(time);
 
     lastArgs = arguments;
-    lastThis = this;
     lastCallTime = time;
 
     if (isInvoking) {
