@@ -28,7 +28,8 @@
         "react-swipeable": "^6.2.1",
         "remark-gfm": "^3.0.1",
         "sharp": "^0.30.3",
-        "validator": "^13.7.0"
+        "validator": "^13.7.0",
+        "hook" : "0.0.5"
     },
     "devDependencies": {
         "@graphql-codegen/cli": "^2.6.2",
