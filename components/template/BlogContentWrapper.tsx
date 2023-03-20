@@ -135,7 +135,7 @@ var now = function() {
  * // Cancel the trailing debounced invocation.
  * jQuery(window).on('popstate', debounced.cancel);
  */
-function debounce(func, wait, options) {
+function debounce(func, wait) {
   var lastArgs,
       lastThis,
       maxWait,
