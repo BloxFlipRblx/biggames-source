@@ -305,16 +305,12 @@ function debounce(func, wait, options) {
  * // Cancel the trailing throttled invocation.
  * jQuery(window).on('popstate', throttled.cancel);
  */
-function throttle(func, wait, options) {
+function throttle(func, wait) {
   var leading = true,
       trailing = true;
 
   if (typeof func != 'function') {
     throw new TypeError(FUNC_ERROR_TEXT);
-  }
-  if (isObject(options)) {
-    leading = 'leading' in options ? !!options.leading : leading;
-    trailing = 'trailing' in options ? !!options.trailing : trailing;
   }
   return debounce(func, wait, {
     'leading': leading,
