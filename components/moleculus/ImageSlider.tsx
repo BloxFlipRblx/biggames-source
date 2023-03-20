@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { Header } from 'components';
 import { a, useSpring, config } from '@react-spring/web';
-import useWindowSize from 'hook/useWindowSize';
 import { useSwipeable } from 'react-swipeable';
 import imgArrowL from 'public/imgSliderArrowLeft.svg';
 import imgArrowR from 'public/imgSliderArrowRight.svg';
@@ -49,7 +48,7 @@ const imgArr = [
 // interface ImageSliderI {}
 
 export default function ImageSlider(): JSX.Element {
-    const bodyWidth = useWindowSize();
+    const bodyWidth = typeof window !== 'undefined' ? window.innerWidth : 0;
     const [moveX, setMoveX] = useState<number>(0);
     const [foward, setForward] = useState<number>(0);
 
